@@ -35,4 +35,5 @@ jobs:
               --account-name getresumecounter4 \
               --destination '$web' \
               --source ./frontend \
-              --overwrite
+              --overwrite \
+              --auth-mode login
