@@ -22,11 +22,9 @@ The resume is a static website hosted on Azure Blob Storage. When someone opens 
 
 Both pipelines run automatically on every push to main — no manual deployment needed.
 
-Frontend (frontend.yml)
-Triggers when files in frontend/ change. Uses azure/cli to upload files to the $web container in Azure Blob Storage via az storage blob upload-batch --overwrite. Authenticates with a Storage Account Key stored as a GitHub secret (AZURE_STORAGE_KEY). Managed identity was attempted first but dropped due to permission issues with the upload command.
+Frontend — uploads static files to Azure Blob Storage using az storage blob upload-batch. Authenticates via Storage Account Key (AZURE_STORAGE_KEY).
 
-Backend (main_getresumecounter.yml)
-Triggers on every push. Builds the C# .NET 8 project with dotnet build, then deploys using Azure/functions-action. Authenticates via GitHub OIDC with a user-assigned managed identity.
+Backend — builds the .NET 8 project and deploys the Function App using Azure/functions-action. Authenticates via GitHub OIDC with a managed identity.
 
 ## Notes
 
@@ -34,7 +32,7 @@ The backend uses the Cosmos DB SDK directly (ReadItemAsync / ReplaceItemAsync) i
 Certificates on the frontend have hover effects and open in a modal on click.
 CORS is configured on the Function App to allow requests from the Blob Storage domain.
 
-##Challenges
+## Challenges
 
 - The CosmosDB output binding does not work with .NET 8 Isolated Worker, so I had to use the Cosmos SDK directly to read and write the counter.
 - Had to recreate the Cosmos DB account due to a partition key misconfiguration.
@@ -42,13 +40,8 @@ CORS is configured on the Function App to allow requests from the Blob Storage d
 - Tracked down a 500 error using Application Insights logs.
 
 ## Screenshots
-
 <img width="2558" height="1308" alt="website" src="https://github.com/user-attachments/assets/ca94a231-e5f9-4217-8eb0-ef8126d4651d" />
-
 ##
-
 <img width="1168" height="358" alt="cosmosDB" src="https://github.com/user-attachments/assets/10fce007-ac1a-44c9-b554-0ee6aa4f2b5d" />
-
 ##
-
 <img width="1526" height="392" alt="fucntion-app" src="https://github.com/user-attachments/assets/e319a689-5c28-440a-b9a5-2fa4ac1b7cb7" />
