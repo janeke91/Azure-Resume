@@ -40,7 +40,11 @@ Backend: builds the .NET 8 project and deploys the Function App using Azure/func
 
 ## Screenshots
 <img width="2558" height="1308" alt="website" src="https://github.com/user-attachments/assets/ca94a231-e5f9-4217-8eb0-ef8126d4651d" />
-##
+
+## 
+
 <img width="1168" height="358" alt="cosmosDB" src="https://github.com/user-attachments/assets/10fce007-ac1a-44c9-b554-0ee6aa4f2b5d" />
-##
+
+## 
+
 <img width="1526" height="392" alt="fucntion-app" src="https://github.com/user-attachments/assets/e319a689-5c28-440a-b9a5-2fa4ac1b7cb7" />
