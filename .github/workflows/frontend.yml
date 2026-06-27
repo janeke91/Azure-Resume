@@ -36,4 +36,4 @@ jobs:
               --destination '$web' \
               --source ./frontend \
               --overwrite \
-              --auth-mode login
+              --account-key ${{ secrets.AZURE_STORAGE_KEY }}
