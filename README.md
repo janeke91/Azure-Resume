@@ -4,7 +4,7 @@ My personal resume hosted on Azure. It tracks how many people have visited the p
 
 ## How it works
 
-The resume is a static website hosted on Azure Blob Storage. When someone opens the page, JavaScript calls an Azure Function that reads a visitor counter from Cosmos DB, increments it, and returns the updated number. The counter is then displayed on the page.
+The resume is a static website hosted on Azure Blob Storage. When someone opens the page, JavaScript calls an Azure Function that reads a visitor counter from Cosmos DB, increases it, and returns the updated number. The counter is then displayed on the page.
 
 ## Tech Stack
 
