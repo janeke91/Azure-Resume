@@ -28,9 +28,8 @@ Backend: builds the .NET 8 project and deploys the Function App using Azure/func
 
 ## Notes
 
-The backend uses the Cosmos DB SDK directly (ReadItemAsync / ReplaceItemAsync) instead of output bindings, which have compatibility issues with .NET 8 Isolated Worker.
-Certificates on the frontend have hover effects and open in a modal on click.
-CORS is configured on the Function App to allow requests from the Blob Storage domain.
+- The backend uses the Cosmos DB SDK directly (ReadItemAsync / ReplaceItemAsync) instead of output bindings, which have compatibility issues with .NET 8 Isolated Worker.
+- CORS is configured on the Function App to allow requests from the Blob Storage domain.
 
 ## Challenges
 
