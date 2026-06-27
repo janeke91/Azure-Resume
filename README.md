@@ -20,11 +20,11 @@ The resume is a static website hosted on Azure Blob Storage. When someone opens 
 
  ## CI/CD
 
-Both pipelines run automatically on every push to main — no manual deployment needed.
+Both pipelines run automatically on every push to main, meaning no manual deployment needed.
 
-Frontend — uploads static files to Azure Blob Storage using az storage blob upload-batch. Authenticates via Storage Account Key (AZURE_STORAGE_KEY).
+Fronten: uploads static files to Azure Blob Storage using az storage blob upload-batch. Authenticates via Storage Account Key (AZURE_STORAGE_KEY).
 
-Backend — builds the .NET 8 project and deploys the Function App using Azure/functions-action. Authenticates via GitHub OIDC with a managed identity.
+Backend: builds the .NET 8 project and deploys the Function App using Azure/functions-action. Authenticates via GitHub OIDC with a managed identity.
 
 ## Notes
 
