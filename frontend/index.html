@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+   <title>Zhansaya's Resume</title>
+   <meta name="description" content="">
+   <meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+   <script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+   ================================================== -->
+   <link rel="shortcut icon" href="favicon.png">
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+            <li><a class="smoothscroll" href="#resume">Resume</a></li>
+         </ul>
+
+      </nav>
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">Hi, I'm Zhansaya</h1>
+            <p>and this page has been viewed <a id="counter"></a> times :) </p>
+            <ul class="social">
+               <li><a href="https://www.linkedin.com/in/zhansaya-a-8405b4379/"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://github.com/janeke91"><i class="fa fa-github"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header>
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="twelve columns main-col">
+
+            <h2>ABOUT ME</h2>
+
+            <p>Hi, I'm Zhansaya Atlas, <span>Sophomore Student at APEC Petrotechnic, Cloud & Security Enthusiast</span>,
+               passionate about cloud security, infrastructure, and networking, learning best by building hands-on labs.
+            </p>
+            <p>I built this page as part of the <span><a href="https://github.com/madebygps/cgc-azure-resume">Cloud Guru Azure Resume Challenge.</a></span></p>
+
+         </div>
+
+      </div>
+
+   </section>
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Certifications -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Certifications</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3 class="cert-title" data-cert="certs/fortinet.png">Fortinet Certified Fundamentals Cybersecurity</h3>
+                  <p class="info"><em class="date">May 2026</em></p>
+               </div>
+            </div>
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3 class="cert-title" data-cert="certs/python.png">Python Generation</h3>
+                  <p class="info"><em class="date">March 2026</em></p>
+               </div>
+            </div>
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3 class="cert-title" data-cert="certs/ipcom.png">IP-COM Network Setup Workshop</h3>
+                  <p class="info"><em class="date">June 2026</em></p>
+               </div>
+            </div>
+
+            <!-- Certificate Modal -->
+            <div id="cert-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
+               <div style="position:relative; width:90%; max-width:900px;">
+                  <button onclick="closeCertModal()" style="position:absolute; top:-40px; right:0; background:none; border:none; color:#fff; font-size:30px; cursor:pointer;">✕</button>
+                  <img id="cert-img" src="" style="width:100%; border-radius:4px; display:block;">
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+
+
+      <!-- Projects -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Projects</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Azure Sentinel Honeypot Lab</h3>
+                  <p class="info">Real-world attack map built with Microsoft Sentinel</p>
+                  <p><li>Deployed a Windows Server VM in Azure as a honeypot, attracting real-world brute force attacks within hours.</li></p>
+                  <p><li>Configured log collection via Azure Monitor Agent into Log Analytics.</li></p>
+                  <p><li>Wrote KQL queries to parse security events and enrich them with geolocation data.</li></p>
+                  <p><li>Visualized attack origins on a world map using Microsoft Sentinel Workbooks.</li></p>
+                  <p><li>Built analytics rules to auto-generate incidents and performed triage, classification, and resolution.</li></p>
+               </div>
+            </div>
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Azure Resume</h3>
+                  <p class="info">In Progress</p>
+                  <p><li>Built a static resume site hosted on Azure Blob Storage.</li></p>
+                  <p><li>Implemented a visitor counter using Azure Functions and Cosmos DB.</li></p>
+                  <p><li>Set up CI/CD pipeline with GitHub Actions.</li></p>
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+
+   </section>
+
+
+   <!-- Footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li><a href="https://www.linkedin.com/in/zhansaya-a-8405b4379/"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://github.com/janeke91"><i class="fa fa-github"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <a href="https://www.styleshout.com/free-templates/ceevee/">Template by CeeVee</a>
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer>
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+   <script src="main.js"></script>
+
+   <script>
+      document.querySelectorAll('.cert-title').forEach(function(el) {
+         el.addEventListener('click', function() {
+            var modal = document.getElementById('cert-modal');
+            document.getElementById('cert-img').src = this.getAttribute('data-cert');
+            modal.style.display = 'flex';
+         });
+      });
+
+      function closeCertModal() {
+         document.getElementById('cert-modal').style.display = 'none';
+         document.getElementById('cert-img').src = '';
+      }
+
+      document.getElementById('cert-modal').addEventListener('click', function(e) {
+         if (e.target === this) closeCertModal();
+      });
+   </script>
+
+</body>
+
+</html>

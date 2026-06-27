@@ -1,0 +1,38 @@
+name: Deploy frontend to Azure Blob Storage
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7B1AB5AB5E7F40B2B7A99817C93C0116 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8F2029AC9BEA4646A7F04AAA95DC5A7B }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_57A4B0FE62A54E609EC7FF0EEB34265E }}
+
+      - name: Upload frontend to Azure Blob Storage
+        uses: azure/cli@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az storage blob upload-batch \
+              --account-name getresumecounter4 \
+              --destination '$web' \
+              --source ./frontend \
+              --overwrite
