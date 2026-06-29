@@ -14,7 +14,7 @@ The resume is a static website hosted on Azure Blob Storage. When someone opens 
 - Database — Azure Cosmos DB
 - CI/CD — GitHub Actions(separate pipelines for frontend and backend)
 
-## Architechture
+## Architecture
 
 <img width="1364" height="814" alt="architecture" src="https://github.com/user-attachments/assets/81fb5ecc-81c9-475f-b379-833a572598e6" />
 
